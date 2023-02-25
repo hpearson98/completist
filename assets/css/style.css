@@ -1,1 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Serif:wght@700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Noto Serif', serif;
+    display: inline-block;
+}
+
+.add-task-button {
+    display: inline-block;
+}
+
+.add-task-form {
+    display: none;
+}
