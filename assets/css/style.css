@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Serif:wght@700&display=swap');
 
 body {
+    background: #FE922D;
     font-family: 'Inter', sans-serif;
 }
 
@@ -14,6 +15,8 @@ header {
 }
 
 .add-task-button {
+    background: #000;
+    color: #FE922D;
     display: inline-block;
 }
 
