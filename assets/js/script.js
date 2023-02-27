@@ -33,6 +33,29 @@ function addTask(event) {
     newTaskInput.classList.add('new-task-input');
     newTaskInput.value = addTaskInput.value;
     taskDiv.appendChild(newTaskInput);
+    // create edit button
+    let editButton = document.createElement('button');
+    editButton.classList.add('edit-btn', 'btn');
+    editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
+    taskDiv.appendChild(editButton);
+
+    // Add delete button
+    let deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-btn', 'btn');
+    deleteButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+    
+    
+    taskDiv.appendChild(deleteButton);
 
     addTaskForm.reset();
+
+    addTaskForm.style.display = 'none';
+    deleteButton.addEventListener('click', function(event) {
+        console.log('I worked')
+        event.target.parentElement.remove();
+    });
+}
+
+function editTask(event) {
+
 }

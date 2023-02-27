@@ -15,11 +15,18 @@ header {
 }
 
 .add-task-button {
-    background: #000;
-    color: #FE922D;
     display: inline-block;
 }
 
 .add-task-form {
     display: none;
+}
+
+.tasks-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.fa-trash, .fa-pencil {
+    pointer-events: none;
 }
