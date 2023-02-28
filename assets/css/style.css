@@ -27,6 +27,6 @@ header {
     margin-top: 1.5rem;
 }
 
-.fa-trash, .fa-pencil {
+.fa-trash, .fa-pencil, .fa-floppy-disk {
     pointer-events: none;
 }

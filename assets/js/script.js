@@ -50,12 +50,30 @@ function addTask(event) {
     addTaskForm.reset();
 
     addTaskForm.style.display = 'none';
+
+    // Code to delete a task
     deleteButton.addEventListener('click', function(event) {
         console.log('I worked')
         event.target.parentElement.remove();
     });
-}
+    
+    // Code to edit a task
+    editButton.addEventListener('click', function(event) {
 
-function editTask(event) {
+        if (editButton.innerHTML === `<i class="fa-solid fa-floppy-disk"></i>`) {
+            editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
+            editButton.id = 'save-btn';
+            newTaskInput.readOnly = true;
+            console.log('task saved');
 
+        } else if (editButton.innerHTML === `<i class="fa-solid fa-pencil"></i>`) {
+            editButton.innerHTML = `<i class="fa-solid fa-floppy-disk"></i>`;
+            editButton.id = 'edit-btn';
+            newTaskInput.readOnly = false;
+            newTaskInput.select();
+            console.log('task editing');
+        }
+
+        console.log(editButton.id);
+    });
 }
