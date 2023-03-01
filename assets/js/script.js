@@ -72,7 +72,8 @@ function addTask(event) {
             console.log('task editing');
         }
     });
-// when checkbox is checked, apply the styling 'text-decoration: line-through;' to task
+
+    // when checkbox is checked, apply the styling 'text-decoration: line-through;' to task
     taskCheckbox.addEventListener('click', function(event) {
         if (taskCheckbox.checked) {
             newTaskInput.style.textDecoration = 'line-through';

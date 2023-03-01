@@ -11,15 +11,22 @@ header {
 
 .title {
     font-family: 'Noto Serif', serif;
-    display: inline-block;
-}
-
-.add-task-button {
+    font-size: 2.5rem;
     display: inline-block;
 }
 
 .add-task-form {
     display: none;
+    font-size: 1.5rem;
+}
+
+.add-task-input {
+    font-size: 1.5rem;
+    width: 50%;
+    background: transparent;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid #000000;
 }
 
 .tasks-container {
@@ -27,6 +34,30 @@ header {
     margin-top: 1.5rem;
 }
 
+.task-div {
+    margin: 1rem auto;
+    background-color: #FF6B00;
+    padding: 0.75rem;
+    width: 70%;
+}
+
+.btn {
+    background-color: #000000;
+    color: #FE922D;
+    border-radius: 5px;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.new-task-input {
+    background: transparent;
+    outline: 0;
+    border: 0;
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+/* Prevents issue where it was difficult to click the edit and delete buttons */
 .fa-trash, .fa-pencil, .fa-floppy-disk {
     pointer-events: none;
 }
