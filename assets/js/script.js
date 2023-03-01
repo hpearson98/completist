@@ -53,8 +53,8 @@ function addTask(event) {
 
     // Code to delete a task
     deleteButton.addEventListener('click', function(event) {
-        console.log('I worked')
         event.target.parentElement.remove();
+        console.log('task deleted');
     });
     
     // Code to edit a task
@@ -62,18 +62,24 @@ function addTask(event) {
 
         if (editButton.innerHTML === `<i class="fa-solid fa-floppy-disk"></i>`) {
             editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
-            editButton.id = 'save-btn';
             newTaskInput.readOnly = true;
             console.log('task saved');
-
         } else if (editButton.innerHTML === `<i class="fa-solid fa-pencil"></i>`) {
             editButton.innerHTML = `<i class="fa-solid fa-floppy-disk"></i>`;
-            editButton.id = 'edit-btn';
             newTaskInput.readOnly = false;
             newTaskInput.select();
+            newTaskInput.style.textDecoration = 'none';
             console.log('task editing');
         }
-
-        console.log(editButton.id);
     });
+// when checkbox is checked, apply the styling 'text-decoration: line-through;' to task
+    taskCheckbox.addEventListener('click', function(event) {
+        if (taskCheckbox.checked) {
+            newTaskInput.style.textDecoration = 'line-through';
+            newTaskInput.style.color = '#808080';
+        } else if (taskCheckbox.checked === false) {
+            newTaskInput.style.textDecoration = 'none';
+            newTaskInput.style.color = '#000000';
+        }
+    })
 }
