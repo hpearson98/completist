@@ -41,6 +41,20 @@ This button helps to keep the user's screen free from clutter, so that the the A
     * Github was used to store the project's code once it was pushed from Git.
 # Testing
 ## Code Validation
+* [W3S Markup Validator](https://validator.w3.org/#validate_by_input)
+    * The W3S Markup Validator was used to ensure the HTML code was free of any syntax errors.
+* [W3S CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+    * The W3S CSS Validator was used to ensure the CSS code was free of any syntax errors.
+* [JSHint Validator](https://jshint.com/)
+    * No errors were found when passing the JavaScript through the official JSHint Validator.
+    * The following metrics were returned:
+    * There are 5 functions in this file.
+    * Function with the largest signature take 1 arguments, while the median is 1.
+    * Largest function has 32 statements in it, while the median is 5.
+    * The most complex function has a cyclomatic complexity value of 3 while the median is 1.
+* Accessibility
+    * I have confirmed that the fonts and colours chosen are easy to understand and the use of aria labels makes the Web Application accessible by running it through lighthouse in devtools.
+![Screenshot of lighthouse results](assets/images/lighthouse-score.png)
 ## Further Testing
 ## Known Bugs
 
