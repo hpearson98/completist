@@ -24,6 +24,7 @@ function addTask(event) {
     // Creates checkbox for new task
     let taskCheckbox = document.createElement('input');
     taskCheckbox.setAttribute('type', 'checkbox');
+    taskCheckbox.setAttribute('aria-label', 'Check task');
     taskCheckbox.classList.add('task-checkbox');
     taskDiv.appendChild(taskCheckbox);
     // input element for new task
@@ -36,12 +37,14 @@ function addTask(event) {
     // create edit button
     let editButton = document.createElement('button');
     editButton.classList.add('edit-btn', 'btn');
+    editButton.setAttribute('aria-label', 'Edit task');
     editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
     taskDiv.appendChild(editButton);
 
     // Add delete button
     let deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-btn', 'btn');
+    deleteButton.setAttribute('aria-label', 'Delete task');
     deleteButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
     
     
@@ -62,10 +65,12 @@ function addTask(event) {
 
         if (editButton.innerHTML === `<i class="fa-solid fa-floppy-disk"></i>`) {
             editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
+            editButton.ariaLabel = 'Edit task';
             newTaskInput.readOnly = true;
             console.log('task saved');
         } else if (editButton.innerHTML === `<i class="fa-solid fa-pencil"></i>`) {
             editButton.innerHTML = `<i class="fa-solid fa-floppy-disk"></i>`;
+            editButton.ariaLabel = 'Save task';
             newTaskInput.readOnly = false;
             newTaskInput.select();
             newTaskInput.style.textDecoration = 'none';
@@ -82,5 +87,5 @@ function addTask(event) {
             newTaskInput.style.textDecoration = 'none';
             newTaskInput.style.color = '#000000';
         }
-    })
+    });
 }
