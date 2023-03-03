@@ -1,0 +1,2 @@
+# Completist
+Completist is an interactive Web Application that uses HTML, CSS and JavaScript. The Web Application functions as a task organiser where users can log tasks, edit logged tasks and check and delete logged tasks. Completist was built to be responsive and be easily usable on a wide range of platforms, from desktop to mobile.
