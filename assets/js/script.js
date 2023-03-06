@@ -1,39 +1,75 @@
+/**
+ * The variables below contain the following elements:
+ * The Add Task Button (The Button used to to reveal the form)
+ * The Add Task Form
+ * The button used the submit the task
+ */
 let addTaskButton = document.getElementById('add-task-btn');
 let addTaskForm = document.getElementById('add-task-form');
 let submitTaskButton = document.getElementById('new-task-submit-btn');
 
-// Event Listeners
+// Event Listeners assigned to the Add Task Button and the Submit Task Buttons.
 addTaskButton.addEventListener('click', revealForm);
 submitTaskButton.addEventListener('click', addTask);
 
-// Functions
+// The function below reveals the form when the Add Task Button is clicked.
 function revealForm(event) {
     addTaskForm.style.display = 'block';
 }
 
+
 function addTask(event) {
-    // Prevents app from refreshing
+    // Prevents app from refreshing.
     event.preventDefault();
 
     let addTaskInput = document.getElementById('add-task-input');
     let tasksContainer = document.getElementById('tasks-container');
-    // Creates div for new task
+
+    /**
+     * The code below does the following:
+     * Creates a div to contain the task
+     * Assigns the div a class
+     * Appends the div to the 'Task Container' div
+     */
     let taskDiv = document.createElement('div');
     taskDiv.classList.add('task-div');
     tasksContainer.appendChild(taskDiv);
-    // Creates checkbox for new task
+    
+    /**
+     * The Code below does the following:
+     * Creates a checkbox element
+     * Gives it an aria-label
+     * Assigns it a class
+     * Appends it to the 'task div'
+     */
     let taskCheckbox = document.createElement('input');
     taskCheckbox.setAttribute('type', 'checkbox');
     taskCheckbox.setAttribute('aria-label', 'Check task');
     taskCheckbox.classList.add('task-checkbox');
     taskDiv.appendChild(taskCheckbox);
-    // input element for new task
+
+    /**
+     * The code below does the follow:
+     * Creates a read only text input
+     * Assigns it a class
+     * Assigns it the same value as the 'Add Task Input' in the form
+     * Appends it the the 'Task Div'
+     */
     let newTaskInput = document.createElement('input');
     newTaskInput.setAttribute('type', 'text');
     newTaskInput.readOnly = true;
     newTaskInput.classList.add('new-task-input');
     newTaskInput.value = addTaskInput.value;
     taskDiv.appendChild(newTaskInput);
+
+    /**
+     * The code below does the following:
+     * Creates the edit and delete task buttons
+     * Assigns them their class
+     * Assigns their aria-labels
+     * Assigns them their approriate icons
+     * Appends them to the 'task div'
+     */
     // create edit button
     let editButton = document.createElement('button');
     editButton.classList.add('edit-btn', 'btn');
@@ -46,39 +82,49 @@ function addTask(event) {
     deleteButton.classList.add('delete-btn', 'btn');
     deleteButton.setAttribute('aria-label', 'Delete task');
     deleteButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-    
-    
     taskDiv.appendChild(deleteButton);
 
+    // Resets Add Task Form
     addTaskForm.reset();
 
+    // Hides the Add Task Form
     addTaskForm.style.display = 'none';
 
-    // Code to delete a task
+    /**
+     * The code below deletes the task when the 'delete task button' is clicked.
+     * The Code Institute Tutor Support team helped me in writing this piece of code and is credited to them.
+     */
     deleteButton.addEventListener('click', function(event) {
         event.target.parentElement.remove();
-        console.log('task deleted');
     });
     
-    // Code to edit a task
+    /**
+     * The Code below allows the user to edit and save an existing task.
+     * It changes the function based on the inner HTML.
+     * If the button contains the pencil (edit) icon, then it will allow the task to be edited.
+     * If the button contains the floppy disk (save) icon, then it will save the users changes.
+     * Although the Code Institute Tutor Support team did not help me specifically with this piece of code is was inspired from the code to delete a task (which is credited to them).
+     */
     editButton.addEventListener('click', function(event) {
 
         if (editButton.innerHTML === `<i class="fa-solid fa-floppy-disk"></i>`) {
             editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
             editButton.ariaLabel = 'Edit task';
             newTaskInput.readOnly = true;
-            console.log('task saved');
         } else if (editButton.innerHTML === `<i class="fa-solid fa-pencil"></i>`) {
             editButton.innerHTML = `<i class="fa-solid fa-floppy-disk"></i>`;
             editButton.ariaLabel = 'Save task';
             newTaskInput.readOnly = false;
             newTaskInput.select();
             newTaskInput.style.textDecoration = 'none';
-            console.log('task editing');
         }
     });
 
-    // when checkbox is checked, apply the styling 'text-decoration: line-through;' to task
+    /**
+     * The Code below does the following:
+     * If checkbox is checked, apply the styling 'text-decoration: line-through;'
+     * If the checkbox is unchecked, apply the default styling
+     */
     taskCheckbox.addEventListener('click', function(event) {
         if (taskCheckbox.checked) {
             newTaskInput.style.textDecoration = 'line-through';
