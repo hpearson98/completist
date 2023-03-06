@@ -117,10 +117,19 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 # Credits
 ## Code
+* The following code is credited to the Code Institue Tutor Support team:
+    ```
+    deleteButton.addEventListener('click', function(event) {
+            event.target.parentElement.remove();
+    ```
 ## Content
+I used the following [YouTube](https://www.youtube.com/) tutorial for inspiration (none of my code was taken directly from these tutorials).
+* [CodeDuck](https://www.youtube.com/watch?v=-pRg_daFjfk&t=377s)
+* [Tyler Potts](https://www.youtube.com/watch?v=MkESyVB4oUw&t=343s)
 
 # Acknowledgements
-
+* I would like to thank my Mentor, Jack Wachira for their quality and continuous feedback.
+* I would like to thank Tutor Support for their assistance.
 
 
 
