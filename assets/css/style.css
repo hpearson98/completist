@@ -50,6 +50,11 @@ header {
     font-size: 1.5rem;
 }
 
+.btn:hover {
+    background-color: #FE922D;
+    color: #000000;
+}
+
 .new-task-input {
     background: transparent;
     outline: 0;
