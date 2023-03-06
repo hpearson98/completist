@@ -95,12 +95,29 @@ header {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
     .title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .btn {
+        font-size: 0.9rem;
+    }
+
+    .add-task-input {
+        width: 70%;
+    }
+
+    .add-task-input, .new-task-input {
         font-size: 1rem;
+    }
+
+    @media (max-width: 370px) {
+        .delete-btn, .edit-btn {
+            right: 10%;
+            left: 0;
+            font-size: 0.75rem;
+            margin: 0.25rem;
+        }
     }
 }
