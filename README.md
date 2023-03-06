@@ -39,6 +39,9 @@ This button helps to keep the user's screen free from clutter, so that the the A
 * The Task Checkbox is interactive so that when the user checks it, the task is crossed off, making it easy for the user to keep track of their tasks.
 
     ![Image of Tesk Checkbox](assets/images/task-checkbox.png)
+### Features Left To Implement
+* Local Storage
+    * The Web Application would greatly benefit from local storage as it would allow the user to return to update their tasks.
 # Technologies Used
 ## Languages Used
 * [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -77,7 +80,7 @@ This button helps to keep the user's screen free from clutter, so that the the A
 * The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge and Safar browsers.
 * The website has been tested on multiple devices with various viewport widths including a desktop, a laptop and an iPhone 14.
 ## Known Bugs
-
+At present there are no known bugs and the application works as intended.
 # Deployment
 ## Github Pages
 The project was deployed to Github Pages using the following steps.
@@ -88,6 +91,8 @@ The project was deployed to Github Pages using the following steps.
 4. On the "Branch" section, set the branch from "None" to "Main".
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
+
+Click [here](https://hpearson98.github.io/completist/) for the live deployment.
 
 ## Forking the Github Repository
 By Forking the Github Repository we create a copy of the original Repository that we can use to view and make changes. This can be done using the following steps.
