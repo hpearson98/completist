@@ -55,6 +55,8 @@ This button helps to keep the user's screen free from clutter, so that the the A
     * Git was used for version control by using the Gitpod terminal to regularly commit to Git and push to Github.
 * [Github](https://github.com/)
     * Github was used to store the project's code once it was pushed from Git.
+* [Figma](https://www.figma.com/) was used in the design process to create wireframes for the project. This made it easy to visualize the layout of the Web Application.
+    ![Image of desktop wireframe](assets/images/wireframe-desktop.png)
 # Testing
 ## Code Validation
 * [W3S Markup Validator](https://validator.w3.org/#validate_by_input)
@@ -72,6 +74,8 @@ This button helps to keep the user's screen free from clutter, so that the the A
     * I have confirmed that the fonts and colours chosen are easy to understand and the use of aria labels makes the Web Application accessible by running it through lighthouse in devtools.
 ![Screenshot of lighthouse results](assets/images/lighthouse-score.png)
 ## Further Testing
+* The website was tested on Google Chrome, Mozilla Firefox, Microsoft Edge and Safar browsers.
+* The website has been tested on multiple devices with various viewport widths including a desktop, a laptop and an iPhone 14.
 ## Known Bugs
 
 # Deployment
