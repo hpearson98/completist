@@ -4,9 +4,9 @@
  * The Add Task Form
  * The button used the submit the task
  */
-let addTaskButton = document.getElementById('add-task-btn');
-let addTaskForm = document.getElementById('add-task-form');
-let submitTaskButton = document.getElementById('new-task-submit-btn');
+const addTaskButton = document.getElementById('add-task-btn');
+const addTaskForm = document.getElementById('add-task-form');
+const submitTaskButton = document.getElementById('new-task-submit-btn');
 
 // Event Listeners assigned to the Add Task Button and the Submit Task Buttons.
 addTaskButton.addEventListener('click', revealForm);
@@ -22,8 +22,8 @@ function addTask(event) {
     // Prevents app from refreshing.
     event.preventDefault();
 
-    let addTaskInput = document.getElementById('add-task-input');
-    let tasksContainer = document.getElementById('tasks-container');
+    const addTaskInput = document.getElementById('add-task-input');
+     tasksContainer = document.getElementById('tasks-container');
 
     /**
      * The code below does the following:
@@ -31,7 +31,7 @@ function addTask(event) {
      * Assigns the div a class
      * Appends the div to the 'Task Container' div
      */
-    let taskDiv = document.createElement('div');
+    const taskDiv = document.createElement('div');
     taskDiv.classList.add('task-div');
     tasksContainer.appendChild(taskDiv);
     
@@ -42,7 +42,7 @@ function addTask(event) {
      * Assigns it a class
      * Appends it to the 'task div'
      */
-    let taskCheckbox = document.createElement('input');
+    const taskCheckbox = document.createElement('input');
     taskCheckbox.setAttribute('type', 'checkbox');
     taskCheckbox.setAttribute('aria-label', 'Check task');
     taskCheckbox.classList.add('task-checkbox');
@@ -55,7 +55,7 @@ function addTask(event) {
      * Assigns it the same value as the 'Add Task Input' in the form
      * Appends it the the 'Task Div'
      */
-    let newTaskInput = document.createElement('input');
+    const newTaskInput = document.createElement('input');
     newTaskInput.setAttribute('type', 'text');
     newTaskInput.readOnly = true;
     newTaskInput.classList.add('new-task-input');
@@ -71,14 +71,14 @@ function addTask(event) {
      * Appends them to the 'task div'
      */
     // create edit button
-    let editButton = document.createElement('button');
+    const editButton = document.createElement('button');
     editButton.classList.add('edit-btn', 'btn');
     editButton.setAttribute('aria-label', 'Edit task');
     editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
     taskDiv.appendChild(editButton);
 
     // Add delete button
-    let deleteButton = document.createElement('button');
+    const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-btn', 'btn');
     deleteButton.setAttribute('aria-label', 'Delete task');
     deleteButton.innerHTML = `<i class="fa-solid fa-trash"></i>`;
