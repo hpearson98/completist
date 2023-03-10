@@ -1,9 +1,3 @@
-/**
- * The variables below contain the following elements:
- * The Add Task Button (The Button used to to reveal the form)
- * The Add Task Form
- * The button used the submit the task
- */
 const addTaskButton = document.getElementById('add-task-btn');
 const addTaskForm = document.getElementById('add-task-form');
 const submitTaskButton = document.getElementById('new-task-submit-btn');
@@ -25,36 +19,19 @@ function addTask(event) {
     const addTaskInput = document.getElementById('add-task-input');
      tasksContainer = document.getElementById('tasks-container');
 
-    /**
-     * The code below does the following:
-     * Creates a div to contain the task
-     * Assigns the div a class
-     * Appends the div to the 'Task Container' div
-     */
+    // Creates the div element to contain the task
     const taskDiv = document.createElement('div');
     taskDiv.classList.add('task-div');
     tasksContainer.appendChild(taskDiv);
     
-    /**
-     * The Code below does the following:
-     * Creates a checkbox element
-     * Gives it an aria-label
-     * Assigns it a class
-     * Appends it to the 'task div'
-     */
+    // Creates the Checkbox
     const taskCheckbox = document.createElement('input');
     taskCheckbox.setAttribute('type', 'checkbox');
     taskCheckbox.setAttribute('aria-label', 'Check task');
     taskCheckbox.classList.add('task-checkbox');
     taskDiv.appendChild(taskCheckbox);
 
-    /**
-     * The code below does the follow:
-     * Creates a read only text input
-     * Assigns it a class
-     * Assigns it the same value as the 'Add Task Input' in the form
-     * Appends it the the 'Task Div'
-     */
+    // Creates a read only text input
     const newTaskInput = document.createElement('input');
     newTaskInput.setAttribute('type', 'text');
     newTaskInput.readOnly = true;
