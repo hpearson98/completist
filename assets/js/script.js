@@ -17,6 +17,13 @@ function addTask(event) {
     event.preventDefault();
 
     const addTaskInput = document.getElementById('add-task-input');
+
+    // Validates form so an empty task cannot be entered
+    if (addTaskInput.value.trim() === '') {
+        alert('Please enter a task');
+        return;
+    }
+
      tasksContainer = document.getElementById('tasks-container');
 
     // Creates the div element to contain the task
@@ -85,6 +92,11 @@ function addTask(event) {
     editButton.addEventListener('click', function(event) {
 
         if (editButton.innerHTML === `<i class="fa-solid fa-floppy-disk"></i>`) {
+            // Validates form so an empty task cannot be entered
+            if (newTaskInput.value.trim() === '') {
+                alert('Please enter a task!');
+                return;
+            }
             editButton.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
             editButton.ariaLabel = 'Edit task';
             newTaskInput.readOnly = true;
