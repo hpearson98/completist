@@ -21,6 +21,7 @@ This button helps to keep the user's screen free from clutter, so that the the A
     ![Image of Add Task Button](assets/images/add-task-button.png)
 ## Add Task Form
 * The Add Task Form features a very clean and minimal design that makes it easy for the user to input their task and confirm it.
+* If the input field is empty, the user is clearly notified to input a task.
 
 ![Image of Add Task Form](assets/images/add-task-form.png)
 ## Task Display Area
@@ -33,6 +34,7 @@ This button helps to keep the user's screen free from clutter, so that the the A
     ![Image of Delete and Edit Buttons](assets/images/delete-task-button.png)
 ## Edit Task Button
 * The Edit Task Button allows the user to edit tasks at the click of button. When the button is clicked, the task text is selected and the user is able to edit their task. The content of the button is also changed from the edit icon, to the save icon, giving the user indication to click the button again to save their changes. Once the Save Button is clicked, the text is locked in and the content of the button is changed back to the edit icon so the user may edit again if they please.
+* If the input field is empty, the user is clearly notified to input a task.
 
     ![Image of Edit Task Button](assets/images/edit-task-button.png)
 ## Task Checkbox
